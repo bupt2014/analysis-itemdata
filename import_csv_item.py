@@ -13,7 +13,7 @@ cursor = mydb.cursor()
 fd=open('tianchi_mobile_recommend_train_item.csv','r')
 fd.readline()
 csv_data = csv.reader(fd)
-cursor.executemany('INSERT INTO tianchi_mobile_recommend_train_user( item_id, item_geohash, item_category)' \
+cursor.executemany('INSERT INTO tianchi_mobile_recommend_train_item( item_id, item_geohash, item_category)' \
           'VALUES(%s, %s, %s)',
           csv_data)
 #close the connection to the database.
