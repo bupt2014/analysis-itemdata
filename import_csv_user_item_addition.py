@@ -20,6 +20,7 @@ for data in csv_data:
             tianchi_mobile_recommend_train_user WHERE item_category = "+ data1  
         cursor.execute(operation)
         print row
+	row += 1
 
 cursor.close()
 mydb.commit()
